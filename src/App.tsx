@@ -18,9 +18,6 @@ type PokemonType ={
 
 
 function App() {
-  /*
-  
-  */
 
   return (
     <>

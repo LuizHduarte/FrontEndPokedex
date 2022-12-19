@@ -47,12 +47,12 @@ export function Pokemon(){
 
     const navigatePrevPokemon = () => {
         // 👇️ navigate to /
-        window.location.href = `/pokemon/${parseInt(params.id)-1}`
+        window.location.href = `/pokemon/${parseInt(params.id!)-1}`
     };
 
     const navigateNextPokemon = () => {
         // 👇️ navigate to /
-        window.location.href = `/pokemon/${parseInt(params.id)+1}`
+        window.location.href = `/pokemon/${parseInt(params.id!)+1}`
     };
 
     const navigateToTypeOne = () => {
@@ -76,13 +76,15 @@ export function Pokemon(){
     let typeOneColor = Types[pokemon?.type as keyof typeof Types]
     let typeTwoTColor = Types[pokemon?.typetwo as keyof typeof Types]
 
-    {if (isLoading) return 'loading...';}
+    {if (isLoading) return (
+        <h1>Loading...</h1>
+    );}
     
     return(  
         <div id="PokemonPageContainer">
             <div id="PokemonPageButtonContainer">
-                <a id="PokemonPagePrevButton" onClick={navigatePrevPokemon} href="#"><span>< IoIosArrowBack /> Nº {pokemon?.id - 1}</span></a>
-                <a id="PokemonPageNextButton" onClick={navigateNextPokemon} href="#"><span> Nº {pokemon?.id + 1} < IoIosArrowForward /></span></a>
+                <a id="PokemonPagePrevButton" onClick={navigatePrevPokemon} href="#"><span>< IoIosArrowBack /> Nº {pokemon!.id - 1}</span></a>
+                <a id="PokemonPageNextButton" onClick={navigateNextPokemon} href="#"><span> Nº {pokemon!.id + 1} < IoIosArrowForward /></span></a>
             </div>
             <div id="pokemonPageIdentityContainer">
                 <h1 className="PokemonPageName">{pokemon?.name}</h1>

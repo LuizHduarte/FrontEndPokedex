@@ -8,7 +8,7 @@ import './style.css'
 export function ManagePokemon(){
     const [operationType, setOperationType] = useState('Add');
 
-    const [PokemonId, setPokemonId] = useState();
+    const [PokemonId, setPokemonId] = useState('');
     const [PokemonName, setPokemonName] = useState('');
     const [pokemonDescription, setPokemonDescription] = useState('');
     const [pokemonHeight, setPokemonHeight] = useState('');
@@ -26,7 +26,7 @@ export function ManagePokemon(){
         setOperationType('Update')
     };
 
-    const handlePokemonSearch = event => {
+    const handlePokemonSearch = (event: { preventDefault: () => void; }) => {
         event.preventDefault();
         axios.get(`https://back-end-pokedex.vercel.app/pokemon/${PokemonId}`)
         .then((response) => {
@@ -44,7 +44,7 @@ export function ManagePokemon(){
           console.error("ops! ocorreu um erro" + err);
         });
     }
-    const handleUpdatePokemon = event =>{
+    const handleUpdatePokemon = (event: { preventDefault: () => void; }) =>{
         event.preventDefault();
         const headers = { 
             'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ export function ManagePokemon(){
         });
     }
 
-    const handleAddPokemon = event =>{
+    const handleAddPokemon = (event: { preventDefault: () => void; }) =>{
         event.preventDefault();
         const headers = { 
             'Content-Type': 'application/json',
@@ -261,9 +261,11 @@ export function ManagePokemon(){
                 <h1>UPDATE POkÉMON</h1>
                 
                 <form id="SearchPokemonForUpdateForm" onSubmit={handlePokemonSearch}>
-                    <input 
+                    <input
+                        name = "id" 
                         type="number" 
-                        onChange={e=>( setPokemonId(e.target.value))} 
+                        onChange={e=>(setPokemonId(e.target.value)
+                        )}
                         placeholder='Pokémon ID'
                         id="UpdatePokemonSearchBar"
                     />
@@ -423,4 +425,7 @@ export function ManagePokemon(){
             </>
         )
     }
+    return(
+        <h1>ERRO</h1>
+    )
 }
