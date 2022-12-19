@@ -1,0 +1,173 @@
+#PokemonPageContainer{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#PokemonPageButtonContainer{
+    display: flex;
+    gap: 2rem;
+    margin-top: 25px;
+    justify-content: space-between;
+}
+
+#PokemonPageNextButton{
+    background-color: rgba(103, 106, 105, 0.673);
+    text-decoration: none;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    text-align: end;
+    position: relative;
+    transition: all .35s;
+}
+  
+#PokemonPageNextButton span{
+    position: relative;
+    z-index: 2;
+}
+
+#PokemonPageNextButton:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #30a7d7;
+    transition: all .35s;
+}
+  
+#PokemonPageNextButton:hover{
+    color: #fff;
+}
+  
+#PokemonPageNextButton:hover:after{
+    width: 100%;
+}
+
+#PokemonPagePrevButton{
+    background-color: rgba(103, 106, 105, 0.673);
+    text-decoration: none;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    text-align: start;
+    position: relative;
+    transition: all .35s;
+}
+  
+#PokemonPagePrevButton span{
+    position: relative;
+    z-index: 2;
+}
+
+#PokemonPagePrevButton:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: #30a7d7;
+    transition: all .35s;
+}
+  
+#PokemonPagePrevButton:hover{
+    color: #fff;
+}
+  
+#PokemonPagePrevButton:hover:after{
+    width: 100%;
+}
+
+#pokemonPageIdentityContainer{
+    display: flex;
+    gap: 2rem;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    align-self: center;
+}
+
+#PokemonPageDescription{
+    font-size: larger;
+    font-weight: 500;
+}
+
+#PokemonPageSecondaryContainer{
+    display: flex;
+}
+
+#PokemonPageDataContainer{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+
+#PokemonPageAtributesContainer{
+    display: flex;
+    background-color: #30a7d7;
+    border-radius: 5px;
+    height: 70%;
+    width: 100%;
+    margin-left: 5px;
+    align-self: center;
+    align-items: center;
+}
+
+.PokemonAttributeTitle{
+    color: white;
+    font-size: 150%;
+    font-weight: 500;
+}
+
+.PokemonAttributeText{
+    color: black;
+    font-size: 170%;
+    font-weight: 600;
+}
+
+.PokemonColumnAtribute {
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+    margin-left: 20px;
+    row-gap: 1rem;
+}
+
+#PokemonPageTypeContainer{
+    margin-top: 5px;
+    align-self: center;
+    display: flex;
+    gap: 0.5rem;
+}
+
+#PokemonPageType{
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    font-size: medium;
+    text-align: center;
+    padding: 0.5rem 8rem;
+}
+
+#PokemonPageType:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+
+
+#pokemonPageImage{
+    max-width: 55%;
+    height: auto;
+}

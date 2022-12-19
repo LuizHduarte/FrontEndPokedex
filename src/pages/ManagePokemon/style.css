@@ -1,0 +1,140 @@
+#ManageMainContent{
+    display: flex;
+}
+
+#manageUpdateFormContent{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    max-width: 50%;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#SearchPokemonForUpdateForm{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 50%;
+}
+
+#UpdatePokemonSearchBar{
+    border-radius: 15px;
+    outline: none;
+    border-color: #3466AF;
+    width: 60%;
+    text-align: start;
+}
+
+#ConfirmPokemonUpdateButton:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#ConfirmPokemonUpdateButton{
+    background-color: #3466AF;
+    width: 50%;
+    height: 1.5rem;
+    margin: 0 auto;
+    border-radius: 15px;
+    color: white;
+}
+
+.manageUpdateInput{
+    height: 1.5rem;
+    outline: none;
+}
+
+.manageUpdateInput:focus{
+    border: 2px solid #30a7d7;
+    transition: 0.1s;
+
+}
+
+.ManageUpdateFormInputContainer{
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+#PokemonUpdateButton{
+    background-color: rgba(103, 106, 105, 0.673);
+    text-decoration: none;
+    width: 100%;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    text-align: end;
+    position: relative;
+    transition: all .35s;
+}
+  
+#PokemonUpdateButton span{
+    position: relative;
+    z-index: 2;
+}
+
+#PokemonUpdateButton:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #30a7d7;
+    transition: all .35s;
+}
+  
+#PokemonUpdateButton:hover{
+    color: #fff;
+}
+  
+#PokemonUpdateButton:hover:after{
+    width: 100%;
+}
+
+#PokemonAddButton{
+    background-color: rgba(81, 85, 84, 0.673);
+    text-decoration: none;
+    width: 100%;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    text-align: start;
+    position: relative;
+    transition: all .35s;
+}
+  
+#PokemonAddButton span{
+    position: relative;
+    z-index: 2;
+}
+
+#PokemonAddButton:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: #30a7d7;
+    transition: all .35s;
+}
+  
+#PokemonAddButton:hover{
+    color: #fff;
+}
+  
+#PokemonAddButton:hover:after{
+    width: 100%;
+}
